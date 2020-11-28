@@ -1,8 +1,5 @@
 package guru.springframework.domain;
 
-import guru.springframework.controllers.Ingredient;
-import guru.springframework.controllers.Notes;
-
 import javax.persistence.*;
 import java.util.Set;
 
@@ -28,6 +25,9 @@ public class Recipe {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
+
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
 
     public String getDescription() {
         return description;
@@ -115,5 +115,13 @@ public class Recipe {
 
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
     }
 }

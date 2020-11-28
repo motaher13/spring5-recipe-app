@@ -1,4 +1,4 @@
-package guru.springframework.controllers;
+package guru.springframework.domain;
 
 import guru.springframework.domain.Recipe;
 
