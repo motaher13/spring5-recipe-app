@@ -1,5 +1,6 @@
 package guru.springframework.repositories;
 
+import guru.springframework.domain.Category;
 import guru.springframework.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;
